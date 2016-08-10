@@ -9,6 +9,7 @@ typedef vector<string> vs;
 typedef pair<int,int> ii;
 typedef set<string> ss;
 
+vi a[2005];
 
 int main(){
 	ios_base::sync_with_stdio(false);
