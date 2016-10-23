@@ -28,6 +28,34 @@ ofstream out;
 
 int main(){
 	FastIO
-	
+	int n,m;
+	ll a[(int)1e5+5];
+	ll x[(int)1e5+5];
+	cin>>n;
+	f(i,0,n)
+		cin>>a[i];
+	cin>>m;
+	f(i,0,m)
+		cin>>x[i];
+	sort(x,x+m);
+	int laser=0;
+	f(i,0,n){
+		if(laser==m)
+			break;
+		if(x[laser] <= i+1){
+			i--;
+			laser++;
+		}
+		else{
+			if(x[laser] - (i+1) < a[i]) 
+				a[i] = x[laser]-(i+1);
+			//cout<<"a["<<(i+1)<<"]:"<<a[i]<<endl;
+		}
+	}
+	ll sum = 0;
+	f(i,0,n)
+		sum+=a[i];
+	cout<<sum<<endl;
 	return 0;
 }
+
