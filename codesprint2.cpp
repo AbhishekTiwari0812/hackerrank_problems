@@ -25,7 +25,21 @@ typedef map<ll,string> mls;
 typedef map<ld,string> mds;
 
 int main(){
-	ios_base::sync_with_stdio(false);
-	cin.tie(NULL);
-	return 0;
+    ios_base::sync_with_stdio(false);
+    cin.tie(NULL);
+    int iter=5;
+    int a[5],b[5];
+    int ans=0;
+    f(i,0,iter)
+        cin>>a[i];
+    f(i,0,iter)
+        cin>>b[i];
+    
+    f(i,0,iter)
+        ans+=min(abs(10-max(a[i],b[i])+min(a[i],b[i])),abs(a[i]-b[i]));
+    cout<<ans<<endl;
+    return 0;
 }
+
+
+

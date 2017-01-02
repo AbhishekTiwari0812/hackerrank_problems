@@ -2,8 +2,8 @@
 #define pb push_back
 #define mp make_pair
 #define all(v) (v).begin(),(v).end()
-#define f(i,a,b) for( int i = ( a ); i < (b); ++i )
-#define fr(i,a,b) for( int i = ( a ); i >= ( b ); --i )
+#define f(i,a,x) for( int i = ( a ); i < (x); ++i )
+#define fr(i,a,x) for( int i = ( a ); i >= ( x ); --i )
 using namespace std;
 typedef long long int ll;
 typedef long double ld;
@@ -25,7 +25,25 @@ typedef map<ll,string> mls;
 typedef map<ld,string> mds;
 
 int main(){
-	ios_base::sync_with_stdio(false);
-	cin.tie(NULL);
-	return 0;
+    ios_base::sync_with_stdio(false);
+    cin.tie(NULL);
+    int n;
+    int k;
+    int ans=0;
+    int temp;
+    int x,val;
+    cin>>n;
+    cin>>k;
+    for(int i=0;i<n;i++){
+        cin>>temp;
+        if(i!=k)
+            ans+=temp;
+    }
+    cin>>x;
+    val=x-(ans/2);
+    if(val)
+        cout<<val<<endl; 
+    else
+        cout<<"Bon Appetit"<<endl;
+    return 0;
 }

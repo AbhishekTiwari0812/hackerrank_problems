@@ -23,9 +23,48 @@ typedef map<string,string> mss;
 typedef map<int,string> mis;
 typedef map<ll,string> mls;
 typedef map<ld,string> mds;
+string a,b;
 
+void solve(){
+	int j = 0;
+	f(i,0,b.length()){
+		if(a[j] != b[i]){
+			cout<<"NO\n";
+			return;
+		}
+		if( i+1 < b.length() && b[i+1] == b[i]){
+			j++;
+			continue;
+		}
+		else{
+			while( j < a.length()){
+				if(a[j+1]==a[j]){
+					j++;
+				}
+				else{
+					j++;
+					break;
+				}
+			}
+		}
+
+	}
+	cout<<"YES\n";
+}
 int main(){
-	ios_base::sync_with_stdio(false);
-	cin.tie(NULL);
+	int n;
+	cin>>n;
+	f(i,0,n){
+		cin>>a>>b;
+        a += "$$$";
+        b += "$";
+		if(b.length() > a.length() ){
+			cout<<"NO\n";
+			continue;
+		}
+		else{
+			solve();
+		}
+	}
 	return 0;
 }

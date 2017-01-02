@@ -1,0 +1,12 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+struct place{
+  set<string> poe;
+  
+};
+
+int main(){
+
+  return 0;
+}
